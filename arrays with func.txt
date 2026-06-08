@@ -54,7 +54,7 @@ void Readpersons(stInfo persons[4])
 
 }
 
-void Printpersons(stInfo persons[4])
+void Printpersons(stInfo persons[2])
 {
 
 	printinfo(persons[0]);
