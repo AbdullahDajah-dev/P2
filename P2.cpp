@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-int Validation(int from, int to)
+int ValidationWhile(int from, int to)
 {
 	int number;
 	cout << "Enter your number: ";
@@ -16,6 +16,17 @@ int Validation(int from, int to)
 	}
 
 	return number;
+
+}
+int ValidationDo(int from, int to)
+{
+	int number;
+	do {
+		cout << "Enter number between " << from << " and " << to << ": ";
+		cin >> number;
+	} while (number < from || number > to);
+	return number;
+
 
 }
 int Posi()
@@ -81,9 +92,22 @@ void PinLogin()
 
 int main()
 {
+	int i = 0;
+	int Search = 20;
+	int arr[10] = { 10,20,44,55,33,22,99,88,99,100 };
 
+	do {
 
-	PinLogin();
+		cout << "we are at iteration " << i + 1 << endl << endl;
+		if (Search == arr[i]) {
+			cout << Search << " Found at position " << i << endl << endl;
+			break;
+		}
+
+		i++;
+	} while (i <= 10);
+	
+	
 
 
 
